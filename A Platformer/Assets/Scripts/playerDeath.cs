@@ -5,6 +5,14 @@ public class playerDeath : MonoBehaviour {
     public GameObject player;
     public Transform startingPos;
 
+    private void Update() {
+        
+        if(player.transform.position.y < -3) {
+            playerDies();
+        }
+
+    }
+
     private void OnTriggerEnter2D(Collider2D other) {
 
         if(other.gameObject.tag == "Ground1" || other.gameObject.tag == "Ground2") {

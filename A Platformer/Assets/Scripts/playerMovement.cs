@@ -10,7 +10,7 @@ public class playerMovement : MonoBehaviour {
     static public bool playerGrounded;
 
     private void Update() {
-
+        
         if(Input.GetKey("w") && playerGrounded) {
             player.GetComponent<Rigidbody2D>().velocity = new Vector2(player.GetComponent<Rigidbody2D>().velocity[0], playerJumpHeight);
             groundChanges.groundChanging();
@@ -36,7 +36,7 @@ public class playerMovement : MonoBehaviour {
             player.transform.position = new Vector2(player.transform.position[0] + playerSpeed * Time.fixedDeltaTime, player.transform.position[1]);
         }
 
-        cam.transform.position = Vector2.Lerp(cam.transform.position, player.transform.position, 1.5f * Time.fixedDeltaTime);
+        cam.transform.position = Vector2.Lerp(cam.transform.position, player.transform.position + new Vector3(0, 2.4f, 0), 1.5f * Time.fixedDeltaTime);
         cam.transform.position = new Vector3(cam.transform.position[0], cam.transform.position[1], -10);
 
     }

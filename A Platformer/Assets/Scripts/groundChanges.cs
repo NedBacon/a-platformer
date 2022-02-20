@@ -13,7 +13,7 @@ public class groundChanges : MonoBehaviour {
 
         ground1 = GameObject.Find("Ground1");
         ground2 = GameObject.Find("Ground2");
-        currentGround = 1;
+        currentGround = 2;
         groundChanging();
 
         // ground1 = GameObject.FindGameObjectsWithTag("Ground1");
